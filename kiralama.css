@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body{
+  background-color:#fec107;
+  padding: 0px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#eleman {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,#eleman:hover{
+  background: grey;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+.demo {
+  font-size: 15px;
+  background: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  outline: 0;
+  height: auto;
+  resize: none;
+  border-style: none;
+  border-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.langimg{
+  width: 40px;
+  height: 27px;
+  vertical-align: middle;
+}
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: rgb(41, 41, 41);
+  height: 80px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 50;
+
+}
+
+label.logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: rgb(240, 239, 239);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 15px;
+  font-weight: 100;
+  font-weight: bold;
+}
+
+nav ul {
+  z-index: 101;
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active {
+  background: rgb(59, 59, 59);
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #fec107;
+}
+a:hover {
+  color: #fec107;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 21px;
+    padding-left: 10px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 740px) {
+  label.logo {
+    font-size: 19px;
+    padding-left: 10px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #222;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+section {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 8px;
+  right: 10px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.float:hover{
+  background-color: #25d366;
+
+}
+
+.my-float {
+  width: 38px;
+  height:38px;
+  margin-left: 11.4px;
+  margin-top: 10.5px;
+}
+
+.second-float {
+
+  width: 35px;
+  height: 35px;
+  margin-left: 12px;
+  margin-top: 12.5px;
+
+}
+
+.phone {
+  display: none;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 75px;
+  right: 10px;
+  background-color: #0077ff;
+  color: #FFF;
+  border-radius: 50px;
+  z-index: 100;
+}
+.phone:hover{
+  background-color: #0077ff;
+}
+
+@media (min-width: 120px) and (max-width: 480px) {
+  .phone {
+    display: inline-block;
+    
+  }
+  body{
+    background-color: #FFF;
+  }
+  .video{display: none;}
+}
+
+
+
+.anchortag:hover{
+  background: none;
+  
+  
+}
+.anchortag{
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+/*** FONTS ***/
+/*** VARIABLES ***/
+/* Colors */
+/*** EXTEND ***/
+/* box-shadow */
+ ol.gradient-list > li, ol.gradient-list > li::before {
+	 box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+/*** STYLE ***/
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+ html, body {
+	 margin: 0;
+	 padding: 0;
+}
+ body {
+	 background-color: #fafafa;
+	 color: #4b4b4b;
+	 font-family: 'Raleway', sans-serif;
+}
+ main {
+	 display: block;
+	 margin: 0 auto;
+	 max-width: 40rem;
+	 padding: 1rem;
+}
+ ol.gradient-list {
+	 counter-reset: gradient-counter;
+	 list-style: none;
+	 margin: 1.75rem 0;
+	 padding-left: 1rem;
+     
+}
+ ol.gradient-list > li {
+	 background: white;
+	 border-radius: 0 0.5rem 0.5rem 0.5rem;
+	 counter-increment: gradient-counter;
+	 margin-top: 1rem;
+	 min-height: 3rem;
+	 padding: 1rem 1rem 1rem 3rem;
+	 position: relative;
+     width: 50%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 40px;
+     
+}
+ ol.gradient-list > li::before, ol.gradient-list > li::after {
+	 background: #444;
+	 border-radius: 1rem 1rem 0 1rem;
+	 content: '';
+	 height: 3rem;
+	 left: -1rem;
+	 overflow: hidden;
+	 position: absolute;
+	 top: -1rem;
+	 width: 3rem;
+     
+}
+ ol.gradient-list > li::before {
+	 align-items: flex-end;
+	 content: counter(gradient-counter);
+	 color: #FEC107;
+	 display: flex;
+	 font: 900 1.5em/1 'Montserrat';
+	 justify-content: flex-end;
+	 padding: 0.125em 0.25em;
+	 z-index: 1;
+     
+     
+}
+
+ ol.gradient-list > li + li {
+	 margin-top: 2rem;
+}
+.baslik{
+  font-size: 24px;
+  font-weight: 700;
+  color: #FEC107;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 6em;
+  margin-bottom: -2em;
+  
+  
+}
+.cizgi{
+    margin-top: 4em;
+    color: rgb(83, 83, 83);
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(83, 83, 83);
+    border-radius: 5px;
+}
+@media (min-width: 120px) and (max-width: 480px) {
+    ol.gradient-list > li {
+        background: white;
+        border-radius: 0 0.5rem 0.5rem 0.5rem;
+        counter-increment: gradient-counter;
+        margin-top: 1rem;
+        min-height: 3rem;
+        padding: 1rem 1rem 1rem 3rem;
+        position: relative;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+
+   }
+   .cizgi{
+    margin-top: 4em;
+    width: 60%;
+    color: rgb(83, 83, 83);
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(83, 83, 83);
+    border-radius: 5px;
+}
+
+
+  }
+  body{
+    background-color:#ececec;
+    padding: 0px;
+  }
+  
+/*# sourceMappingURL=main.css.map */

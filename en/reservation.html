@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>İstanbul Transferin</title>
+
+  <script defer src="node_modules/@fortawesome/fontawesome-free/js/brands.js?v=2"></script>
+  <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js?v=2"></script>
+  <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js?v=2"></script>
+  <script defer src="node_modules/@fortawesome/fontawesome-free/js/all.js?v=2"></script>
+  <link rel="icon" href="icon.png?v=2"></i>
+  <script src="script.js"></script>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../rezervasyon.css?v=2">
+  <link rel="stylesheet" href="../node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="../node_modules/moment/moment.js"></script>
+  <script type="text/javascript" src="../node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+  <script type="text/javascript" src="../node_modules/moment/locale/tr.js"></script>
+  <style>
+
+        .result{
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 640px;
+            margin-right: 20px;
+            padding: .5em;
+        }
+        section.note{
+            box-sizing: border-box;
+            max-width: 640px;
+        }
+        [class^='dtp-btn-']{
+            font-size: 12px;
+            margin: 0 3px;
+            padding: .25em .5em;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: #fff;
+        }
+        [class^='dtp-btn-']:hover{
+            color: #fff;
+            background: #4444;
+        }
+        .dtp-picker-days{
+            width: 100%;
+        }
+        .dtp div.dtp-date{
+          background: rgb(85, 85, 85);
+        }
+        .dtp > .dtp-content > .dtp-date-view > header.dtp-header{
+          background: #333;
+        }
+        .dtp table.dtp-picker-days tr > td > a.selected{
+          background: #333;
+        }
+        .dtp div.dtp-actual-year{
+          color: rgb(144, 142, 142);
+        }
+        .dtp .p10 > a{
+          color: #333;
+        }
+        .hour-hand{
+          stroke: #333;
+        }
+
+
+    </style>
+</head>
+<body>
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+
+    </label>
+    <label class="logo">İstanbul Transferin</label>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active"  href="reservation.html">Reservatıon</a></li>
+      <li><a href="renting.html">Rentıng Terms</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="../index.html"><img class="langimg" src="/image/lang/tr.png" alt=""></a></li>   
+     </ul>
+  </nav>
+  <video class="video" autoplay loop src="../video/klip.m4v?v=2"></video>
+<div class="wrapper animate__animated animate__fadeIn">
+    <div class="title">
+      Reservatıon
+    </div>
+    <form autocomplete="off" action= "https://formsubmit.co/el/pataso" method="POST" >
+      <div class="aracresim">
+        <div class="vitoresim">
+          <img  style="width: 125px; height: 75px;" src="../image/vitoresim.png?v=2" alt="">
+        </div>
+
+        <div class="sprinterresim">
+          <img  style="width: 125px; height: 75px;" src="../image/sprinterresim.png?v=2" alt="">
+        </div>
+      </div>
+      <div class="aracbuton">
+      <input class="vitobuton" type="radio" required name ="Araç" id="vito"value="Vito" checked="checked" onclick="myFunction()">
+     <input class="sprinterbuton" type="radio" required name ="Araç" id="sprinter" value="Sprinter" onclick="myFunction()">
+      </div>
+      <div class="aracyazi">
+        <div  class="vitoyazi">
+          <p class="yazialign">Max. Passenger: up to 6 people</p>
+          <p  class="yazialign">Baggage Size : up to 6 luggages  </p>
+        </div>
+        <div  class="sprinteryazi">
+          <p class="yazialign">Max. Passenger: up to 13 people</p>
+          <p  class="yazialign">Baggage Size: up to 13 luggages  </p>
+        </div>
+
+      </div>
+
+
+      <div class="inputfield">
+          <label>From</label>
+         <div class="custom_select">
+          <select  required class="bolgesecici"name="Nereden"id="birinci" onchange="myFunction()">
+            <i class="fas fa-map-marker-alt"></i>
+            <option disabled selected>Select</option>
+            <option value="Sabiha Gökçen">Sabiha Gökçen Airport</option>
+            <option value="İstanbul Havalimanı">Istanbul Airport</option>
+            <option value="Arnavutköy">Arnavutköy</option>
+            <option value="Ataşehir">Ataşehir</option>
+            <option value="Avcılar">Avcılar</option>
+            <option value="Bahçelievler">Bahçelievler</option>
+            <option value="Bakırköy">Bakırköy</option>
+            <option value="Başakşehir">Başakşehir</option>
+            <option value="Bayrampaşa">Bayrampaşa</option>
+            <option value="Bağcılar">Bağcılar</option>
+            <option value="Beşiktaş">Beşiktaş</option>
+            <option value="Beykoz">Beykoz</option>
+            <option value="Beylikdüzü">Beylikdüzü</option>
+            <option value="Beyoğlu">Beyoğlu</option>
+            <option value="Büyükçekmece">Büyükçekmece</option>
+            <option value="Çatalca">Çatalca</option>
+            <option value="Çekmeköy">Çekmeköy</option>
+            <option value="Esenler">Esenler</option>
+            <option value="Esenyurt">Esenyurt</option>
+            <option value="Eyüpsultan">Eyüpsultan</option>
+            <option value="Fatih">Fatih</option>
+            <option value="Gaziosmanpaşa">Gaziosmanpaşa</option>
+            <option value="Güngören">Güngören</option>
+            <option value="Kadıköy">Kadıköy</option>
+            <option value="Kartal">Kartal</option>
+            <option value="Kağıthane">Kağıthane</option>
+            <option value="Küçükçekmece">Küçükçekmece</option>
+            <option value="Maltepe">Maltepe</option>
+            <option value="Pendik">Pendik</option>
+            <option value="Sancaktepe">Sancaktepe</option>
+            <option value="Sarıyer">Sarıyer</option>
+            <option value="Şile">Şile</option>
+            <option value="Silivri">Silivri</option>
+            <option value="Şişli">Şişli</option>
+            <option value="Sultanbeyli">Sultanbeyli</option>
+            <option value="Sultangazi">Sultangazi</option>
+            <option value="Tuzla">Tuzla</option>
+            <option value="Ümraniye">Ümraniye</option>
+            <option value="Üsküdar">Üsküdar</option>
+            <option value="Zeytinburnu">Zeytinburnu</option>
+          </select>
+          </div>
+       </div>
+        <div class="inputfield">
+          <label>To</label>
+          <div class="custom_select">
+          <select required class="bolgesecici" name="Nereye" id="ikinci" onchange="myFunction()" >
+            <option disabled selected>Select</option>
+            <option value="Sabiha Gökçen">Sabiha Gökçen Airport</option>
+            <option value="İstanbul Havalimanı">Istanbul Airport</option>
+            <option value="Arnavutköy">Arnavutköy</option>
+            <option value="Ataşehir">Ataşehir</option>
+            <option value="Avcılar">Avcılar</option>
+            <option value="Bahçelievler">Bahçelievler</option>
+            <option value="Bakırköy">Bakırköy</option>
+            <option value="Başakşehir">Başakşehir</option>
+            <option value="Bayrampaşa">Bayrampaşa</option>
+            <option value="Bağcılar">Bağcılar</option>
+            <option value="Beşiktaş">Beşiktaş</option>
+            <option value="Beykoz">Beykoz</option>
+            <option value="Beylikdüzü">Beylikdüzü</option>
+            <option value="Beyoğlu">Beyoğlu</option>
+            <option value="Büyükçekmece">Büyükçekmece</option>
+            <option value="Çatalca">Çatalca</option>
+            <option value="Çekmeköy">Çekmeköy</option>
+            <option value="Esenler">Esenler</option>
+            <option value="Esenyurt">Esenyurt</option>
+            <option value="Eyüpsultan">Eyüpsultan</option>
+            <option value="Fatih">Fatih</option>
+            <option value="Gaziosmanpaşa">Gaziosmanpaşa</option>
+            <option value="Güngören">Güngören</option>
+            <option value="Kadıköy">Kadıköy</option>
+            <option value="Kartal">Kartal</option>
+            <option value="Kağıthane">Kağıthane</option>
+            <option value="Küçükçekmece">Küçükçekmece</option>
+            <option value="Maltepe">Maltepe</option>
+            <option value="Pendik">Pendik</option>
+            <option value="Sancaktepe">Sancaktepe</option>
+            <option value="Sarıyer">Sarıyer</option>
+            <option value="Şile">Şile</option>
+            <option value="Silivri">Silivri</option>
+            <option value="Şişli">Şişli</option>
+            <option value="Sultanbeyli">Sultanbeyli</option>
+            <option value="Sultangazi">Sultangazi</option>
+            <option value="Tuzla">Tuzla</option>
+            <option value="Ümraniye">Ümraniye</option>
+            <option value="Üsküdar">Üsküdar</option>
+            <option value="Zeytinburnu">Zeytinburnu</option>
+          </select>
+        </div>
+       </div>
+       <div class="inputfield">
+          <label>Full Name</label>
+          <input name= "İsim" required type="text" class="input">
+       </div>
+       <div class="inputfield">
+        <label>E-Mail</label>
+        <input name= "email" required type="email" class="input">
+     </div>
+      <div class="inputfield">
+          <label>Phone Number</label>
+          <input name= "Tel No:"required type="text" class="input">
+       </div>
+        <div class="inputfield">
+          <label>Number of Passengers</label>
+
+            <input required type="number" min="1" max="15" name="Yolcu Sayısı" class="input">
+
+
+        </div>
+        <div class="inputfield">
+          <label>Date</label>
+          <script>
+            $(function () {
+              var m = moment();
+              $('#range').bootstrapMaterialDatePicker({
+                  format: 'LLL',
+                  minDate: moment().add(1,'hour'),
+                  maxDate: moment().add(2, 'month'),
+                  lang: 'en',
+
+              });
+            });
+        </script>
+        <input  name= "Tarih"required class="input" type="text" id="range">
+       </div>
+      <div class="inputfield">
+          <label>Flight Notes</label>
+          <input  name= "Uçuş Notları"type="text" class="input">
+       </div>
+      <div id="adresarea" class="inputfield">
+          <label>Full Address</label>
+          <textarea name= "Adres"required class="textarea"></textarea>
+       </div>
+      <div class="inputfield">
+          <label>Special Notes</label>
+          <input  name= "Özel Notlar" type="text" class="input">
+       </div>
+       <div class="inputfield">
+        <label>Payment Method</label>
+        <div class="custom_select">
+        <select name= "Ödeme Yöntemi" required >
+          <option disabled selected></option>
+          <option >Cash</option>
+          <option >EFT/Bank Transfer</option>
+
+        </select>
+      </div>
+     </div>
+
+        <label>       <div class="ucretfont">
+          <textarea  class ="demo" id="demo" name = "Ücret:" readonly=readonly>Price: </textarea>
+
+        </label>
+
+     </div>
+
+
+
+      <div class="inputfield terms">
+          <label class="check">
+            <input required type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>  I agree <a class="anchortag"href="renting.html?v=2"> the renting terms.</a></p>
+       </div>
+      <div class="inputfield">
+        <button class="btn" onclick="fiyathesaplama()" >Complete Reservation</button>
+
+
+      </div>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="basic">
+      <input type="hidden" name="_next" value="istanbultransfer.online/index.html">
+      <input type="hidden" name="_subject" value="Rezervasyon">
+      <input type="hidden" name="_autoresponse" value="Rezervasyonunuz onay sürecindedir.">
+
+
+
+
+
+
+
+    </form>
+</div>
+
+</body>
+</html>

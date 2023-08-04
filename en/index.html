@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Istanbul Transferin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icon.png?v=2"></i>
+  <link rel="stylesheet" href="../main.css">
+  <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js?v=2"></script>
+  <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js?v=2"></script>
+  <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js?v=2"></script>
+  <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js?v=2"></script>
+  <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Istanbul Transferin</label>
+    <ul>
+      <li><a  class="active" href="index.html">Home</a></li>
+      <li><a  href="reservation.html">Reservatıon</a></li>
+      <li><a href="renting.html">Rentıng Terms</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="../index.html"><img class="langimg" src="/image/lang/tr.png" alt=""></a></li>
+    </ul>
+  </nav>
+  <div class="glide animate__animated animate__fadeIn">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><div class="vito1"></div></li>
+        <li class="glide__slide"><div class="vito2"></div></li>
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left " data-glide-dir="<"><div class="geributon"><</div> </button>
+      <button class="glide__arrow glide__arrow--right " data-glide-dir=">"><div class="ileributon">></div></button>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+  <script>
+  new Glide('.glide', {
+    type: 'carousel',
+    gap: 0,
+    autoplay: 2500,
+    hoverpause: false,
+  }).mount()
+  </script>
+
+  <div class="istanbultransferintext">
+    <h2 class="textHeader">Istanbul Transferin</h2>
+    <p class="vip">VIP Transfer Service</p>
+    <p class="textYazi">We are trying to provide you with the best transfer service. We provide transfer services to all regions and hotels of Istanbul with our friendly, expert staff. We strive to provide the best transfer experience.</p>
+  </div>
+
+  <div class="rezervasyonYap">
+    <h2 class="rezervasyonText">Reservation</h2>
+    <p class="vipRezervasyon">You can make reservation for a VIP Transfer.</p>
+
+    <a href="reservation.html"><button class="rezervasyonButton"type="button" name="button">Make Reservation</button></a>
+  </div>
+
+  <div class="contact">
+    <h2 class="contactHeader">Contact</h2>
+    <p class="contactText">You can contact as you wish.</p>
+    <div class="contactGrid">
+      <div class="gridLeft">
+        <p class="yazilar"><i class="fa fa-phone"></i>  0541 712 7757</p>
+        <p class="yazilar"><i class="fa fa-envelope"></i>  contact@istanbultransferin.com</p>
+      </div>
+      <div class="gridRight">
+        <form class="contactForm" action="https://formsubmit.co/theretroman53@gmail.com" method="post">
+          <input required class="topInput"placeholder="Full Name"type="text" name="İsim-Soyisim" value=""> <input required class="topInput topLeftInput" placeholder="E-Mail" type="text" name="mail" value="">
+          <br>
+          <input required class="downInput" placeholder="Message" type="text" name="Message" value=""><br>
+          <button class="sendButton"  name="button">SEND</button>
+          <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="basic">
+      <input type="hidden" name="_next" value="http://istanbultransfer.online/index.html">
+      <input type="hidden" name="_subject" value="İstanbul Transferin'den Mesaj var.">
+        </form>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footerBottom">
+  <p>Copyright © 2021 | All rights reserved.</p>
+</div>
+
+<a  href="https://api.whatsapp.com/send?phone=905417127757&text=" class="float" target="_blank">
+  <img class="my-float" src="/image/whatsapp.png" alt="">
+  </a>
+  <a  href="tel:+905417127757" class="phone">
+    <img class="second-float" src="/image/phone.png" alt="">
+  </a>
+
+</body>
+
+</html>

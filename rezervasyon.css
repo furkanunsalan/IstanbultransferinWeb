@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body{
+  background: rgb(253, 253, 253);
+  padding: 0px;
+}
+
+
+
+#eleman {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+#eleman:hover{
+  color: #fec107;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+#eleman.active{
+  color: #fec107;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+.demo {
+  text-align: center;
+  font-size: 22px;
+  background: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  outline: 0;
+  height: auto;
+  resize: none;
+  border-style: none;
+  border-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+
+}
+
+
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+.langimg{
+  width: 40px;
+  height: 27px;
+  vertical-align: middle;
+}
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: rgb(41, 41, 41);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+label.logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+nav ul {
+  z-index: 101;
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active {
+  background: rgb(59, 59, 59);
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #fec107;
+}
+a:hover {
+  color: #fec107;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 21px;
+    padding-left: 10px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 740px) {
+  label.logo {
+    font-size: 19px;
+    padding-left: 10px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #222;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+section {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 8px;
+  right: 10px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.float:hover{
+  background-color: #25d366;
+
+}
+
+.my-float {
+  width: 50px;
+  height: 50px;
+  margin-left: 6px;
+  margin-top: 5.5px;
+}
+
+.second-float {
+
+  width: 35px;
+  height: 35px;
+  margin-left: 12px;
+  margin-top: 12.5px;
+
+}
+
+.phone {
+  display: none;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 75px;
+  right: 10px;
+  background-color: #0077ff;
+  color: #FFF;
+  border-radius: 50px;
+  z-index: 100;
+}
+.phone:hover{
+  background-color: #0077ff;
+}
+
+@media (min-width: 120px) and (max-width: 480px) {
+  .phone {
+    display: inline-block;
+  }
+  .sprinteryazi{
+    width: 110%;
+  }
+  .wrapper .title{
+    margin-top: -10%;
+    margin-bottom: 20%;
+  }
+  body{
+    background-color: #FFF;
+  }
+  .video{display: none;}
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: rgb(253, 253, 253);
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fec107;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.wrapper form{
+  width: 100%;
+
+}
+
+.wrapper form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper form .inputfield label{
+   width: 200px;
+   color: #464646;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper form .inputfield .input,
+.wrapper form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper form .inputfield .custom_select select {
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper form .inputfield .input:focus,
+.wrapper form .inputfield .textarea:focus,
+.wrapper form .inputfield .custom_select select:focus{
+  border: 1px solid rgb(109, 109, 109);
+}
+
+.wrapper form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper form .inputfield .btn:hover{
+  background: #ffca2b;
+}
+
+.wrapper form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+.wrapper{
+
+  box-shadow: none;
+
+}
+.aracresim{
+  display:grid;
+  grid: 6em/50%50%;
+
+}
+.vitoresim{
+  margin-right: auto;
+  margin-left: auto;
+}
+.sprinterresim{
+  margin-right: auto;
+  margin-left: auto;
+}
+.aracbuton{
+  display:grid;
+  grid: 2em/50%50%;
+
+}
+.vitobuton{
+  margin-right: auto;
+  margin-left: auto;
+}
+.sprinterbuton{
+  margin-right: auto;
+  margin-left: auto;
+}
+.aracyazi{
+  display:grid;
+  grid: 4em/50%50%;
+  color: #757575;
+
+}
+.sprinteryazi
+{
+  font-size: 12px;
+
+
+
+}
+.vitoyazi
+{
+  font-size: 12px;
+
+  height: 1px;
+
+}
+.yazialign{
+  text-align: center;
+}
+textarea{
+  color: #757575;
+}
+.anchortag:hover{
+  background: none;
+
+
+}
+.anchortag{
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+}
+.video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -50;
+}
+.ucretfont{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+/*# sourceMappingURL=main.css.map */
